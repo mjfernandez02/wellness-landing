@@ -1,0 +1,6 @@
+import { useState } from 'react'
+import { Menu, X, ArrowUpRight } from 'lucide-react'
+import styles from './Navbar.module.css'
+const links = [['Home', '#home'], ['Treatments', '#treatments'], ['Our Approach', '#approach'], ['FAQ', '#faq']]
+function Navbar() { const [open, setOpen] = useState(false); const close = () => setOpen(false); return <header className={styles.header}><nav className={styles.nav} aria-label="Main navigation"><a className={styles.brand} href="#home" onClick={close} aria-label="Aurea Wellness home">aurea<span>wellness</span></a><div className={styles.links}>{links.map(([label, href]) => <a key={href} href={href}>{label}</a>)}</div><a className={`${styles.cta} button buttonSmall`} href="#treatments">Explore your options <ArrowUpRight size={15} /></a><button className={styles.menuButton} onClick={() => setOpen(!open)} aria-label={open ? 'Close menu' : 'Open menu'} aria-expanded={open} aria-controls="mobile-menu">{open ? <X /> : <Menu />}</button></nav><div id="mobile-menu" className={`${styles.mobileMenu} ${open ? styles.open : ''}`} aria-hidden={!open}>{links.map(([label, href]) => <a tabIndex={open ? 0 : -1} key={href} href={href} onClick={close}>{label}</a>)}<a tabIndex={open ? 0 : -1} className="button" href="#treatments" onClick={close}>Explore your options <ArrowUpRight size={16} /></a></div></header> }
+export default Navbar

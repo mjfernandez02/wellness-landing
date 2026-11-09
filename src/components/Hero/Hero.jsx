@@ -1,0 +1,6 @@
+import { ArrowDownRight, ArrowUpRight } from 'lucide-react'
+import Reveal from '../Reveal/Reveal'
+import heroImage from '../../assets/images/hero-wellness.jpg'
+import styles from './Hero.module.css'
+function Hero() { return <section id="home" className={styles.hero} aria-labelledby="hero-title"><div className={styles.copy}><Reveal><p className="eyebrow">A more intentional way forward</p></Reveal><Reveal delay={0.08}><h1 id="hero-title">Wellness,<br /><em>thoughtfully</em> tailored<br />to you.</h1></Reveal><Reveal delay={0.16}><p className={styles.description}>Discover a more personal approach to wellness, guided by clinical expertise and designed around your individual goals.</p></Reveal><Reveal delay={0.22}><div className={styles.actions}><a className="button" href="#treatments">Explore treatments <ArrowUpRight size={17} /></a><a className="textLink" href="#approach">Discover our approach <ArrowDownRight size={17} /></a></div></Reveal></div><Reveal className={styles.visual} delay={0.1}><img src={heroImage} alt="Softly lit wellness spa room with a calm, restorative atmosphere" fetchPriority="high" /><div className={styles.visualNote}><span>01 / 04</span><p>Space to pause.<br />Support to move forward.</p></div></Reveal></section> }
+export default Hero
