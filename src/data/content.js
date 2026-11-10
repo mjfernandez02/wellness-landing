@@ -5,8 +5,8 @@ export const treatments = [
   { number: '04', title: 'Preventive Wellness', description: 'Make room for proactive conversations that help you stay connected to your long-term goals.', image: 'interior', tone: 'moss' },
 ]
 export const testimonials = [
-  { quote: '“The experience felt calm, clear, and built around the questions I actually had.”', name: 'Sample client story', detail: 'Illustrative content — not a customer review' },
-  { quote: '“I appreciated having a place to begin, without feeling rushed or overwhelmed.”', name: 'Sample client story', detail: 'Illustrative content — not a customer review' },
+  { quote: 'The experience felt calm, clear, and built around the questions I actually had.', name: 'Sample client story', detail: 'Illustrative content — not a customer review' },
+  { quote: 'I appreciated having a place to begin, without feeling rushed or overwhelmed.', name: 'Sample client story', detail: 'Illustrative content — not a customer review' },
 ]
 export const faqItems = [
   { question: 'How does the wellness process work?', answer: 'Begin by exploring the areas that feel most relevant to you. When appropriate, a healthcare professional can help you understand available next steps and what to expect.' },
